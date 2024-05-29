@@ -15,7 +15,9 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=255)
     stock = models.IntegerField()
     puntaje = models.FloatField()
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(
+        Categoria,
+        on_delete=models.CASCADE)
     creado_en = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
