@@ -17,3 +17,6 @@ class Producto(models.Model):
     puntaje = models.FloatField()
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     creado_en = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.nombre
