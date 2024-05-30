@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primera Aplicación Django</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: grey;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .text-3d {
+            font-size: 48px;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+            perspective: 500px;
+        }
+        .text-3d div {
+            transform: rotateX(10deg);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-3d"><div>PRIMERA APLICACION DJANGO</div></div>
+        <div class="text-3d"><div>FLAVIU MAXIM</div></div>
+    </div>
+</body>
+</html>
+
+
+
+{% endblock  %}
